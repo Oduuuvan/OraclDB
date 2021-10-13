@@ -1,0 +1,89 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="CBCDB9D5-958C-91F0-2853-29159CEB40DD" name="ksch_cabinet">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>2EA57440-BA44-3726-4299-6CE32EB3D5F6</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<ordsAlias>cabinet</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>354A7818-CEB1-B5AB-C96F-56CA8E68EFCA</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="cabinet_number" id="555B0DDA-56AF-D641-3FE8-54A7BF8EBCB8">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>4028FF28-3B3C-7CB8-04AA-AA880FCA5D9E</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>5</dataTypePrecision>
+<ownDataTypeParameters>,5,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="campus" id="9027F00A-474A-F4C8-D73E-B36F086F67D9">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>4C65BAB8-6D54-18D3-A497-E4850CD771D1</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>20</dataTypeSize>
+<ownDataTypeParameters>20,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="school_id" id="AA765244-2CC1-7B81-8ABE-F18393B524C5">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>32FD4536-FBEA-AA2B-FCF3-86509D1B6300</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4667D35A-8AB2-52D4-E220-D235879D9DB6" referredColumn="55E7E963-A7AD-DCC3-9DEB-99171AEED74E"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="8E5FF62B-600A-6991-6C10-3763EA3DDE9B" name="cabinet_PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>AFF40884-F6EA-8741-BE76-73C2F30A81D0</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2796CAC3-2191-7428-7AB1-0E16D1571618" name="cabinet_school_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<generatorID>F1DC442F-A75E-201A-C6FA-D116D75B4E36</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA765244-2CC1-7B81-8ABE-F18393B524C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

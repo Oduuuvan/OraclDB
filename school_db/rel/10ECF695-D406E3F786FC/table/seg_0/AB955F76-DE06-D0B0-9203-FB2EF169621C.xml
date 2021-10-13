@@ -1,0 +1,62 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AB955F76-DE06-D0B0-9203-FB2EF169621C" name="ksch_lesson_time">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>DE82C1C4-53E8-3AB6-0977-4C6D777BA4E7</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<ordsAlias>lesson_time</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="B14E0CB6-C4C0-F544-7FB0-4A4AC4F387EB">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>873B71AD-F77D-3D44-6A01-2EEAEF216987</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="start_time" id="C28045A7-51F3-A591-1827-957E6473FCF6">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>20146F89-34F4-1E2D-4E73-871C1665614D</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="end_time" id="D54B721C-B5E1-CFE8-F1D2-DCD89291E063">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>64BDF9A4-ECB3-FD73-A67B-F23703C872E9</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT014</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="0D7E05A9-9F0F-12CC-2A9F-A12A3FBA3AFB" name="lesson_time_PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>130F3F12-4FF4-4600-21D3-6382868C7A66</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="B14E0CB6-C4C0-F544-7FB0-4A4AC4F387EB"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

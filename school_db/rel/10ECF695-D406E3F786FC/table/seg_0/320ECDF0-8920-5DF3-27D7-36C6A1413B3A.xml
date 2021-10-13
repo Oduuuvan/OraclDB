@@ -1,0 +1,88 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="320ECDF0-8920-5DF3-27D7-36C6A1413B3A" name="ksch_school">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>80543C81-FED4-46CF-6ADE-250A35E695BA</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<ordsAlias>school</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="55E7E963-A7AD-DCC3-9DEB-99171AEED74E">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>07FB635E-8758-0C39-9E2A-0EB0F1D2F15A</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="address" id="F72E10B6-0F79-DC26-1F13-2C043A006FC0">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>5E7E9DA8-AEB7-4E48-F23E-86E325E00CED</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="school_name" id="A201102B-205A-E2F5-A344-13A61E743F1F">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>D3B52499-A0D9-7AFE-7BD3-1C979A7447A0</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mail" id="7BA0FFE0-205D-7B47-687B-100D4F6887C7">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>C154587F-27B8-4640-2F91-4ED471C45161</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="phone" id="C0DD5D57-75EE-36AD-1D3A-FBDEB5909A97">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>1FA201AF-3FF0-BE24-A49C-890B06DAC716</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>12</dataTypeSize>
+<ownDataTypeParameters>12,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="926AA777-647F-5881-F898-474B0ACC00E9" name="school_PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<generatorID>7226ED0B-FC7A-E0F5-6CF2-2269FA452B60</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="55E7E963-A7AD-DCC3-9DEB-99171AEED74E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

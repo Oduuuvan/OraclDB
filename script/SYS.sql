@@ -1,0 +1,23 @@
+alter session set "_ORACLE_SCRIPT"=true;
+CREATE USER school identified by school;
+grant create session to school;
+grant create table to school;
+grant create procedure to school;
+grant create trigger to school;
+grant create view to school;
+grant create sequence to school;
+grant alter any table to school;
+grant alter any procedure to school;
+grant alter any trigger to school;
+grant alter profile to school;
+grant delete any table to school;
+grant drop any table to school;
+grant drop any procedure to school;
+grant drop any trigger to school;
+grant drop any view to school;
+grant drop profile to school;
+
+grant select on sys.v_$session to school;
+grant select on sys.v_$sesstat to school;
+grant select on sys.v_$statname to school;
+grant SELECT ANY DICTIONARY to school;

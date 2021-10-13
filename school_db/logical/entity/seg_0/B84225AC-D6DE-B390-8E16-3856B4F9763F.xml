@@ -1,0 +1,128 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="B84225AC-D6DE-B390-8E16-3856B4F9763F" name="ksch_lesson">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:47:15 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="1F70C261-CA28-1202-50C3-3B669C090E06">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:47:28 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="homework" id="10E035AD-E2AD-0CB0-748E-DCE0C7BE80EE">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:47:38 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="class_id" id="DF0148FB-1343-97BD-D056-904F14571BD7">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:48:17 UTC</createdTime>
+<generatorID>547BEEFA-420B-E75B-268A-9433B34063A8</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>3C9E6A77-E605-F956-E2B1-28153E6DF2F1</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="teacher_id" id="B88E593D-7733-2A79-29D5-531BD9421982">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:49:14 UTC</createdTime>
+<generatorID>E8F60C87-63E8-708D-3A83-D26F5D5047E4</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>D9D4DF98-E1B1-D079-D10D-373E484E91EE</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="cabinet_id" id="998353F0-E729-76BB-BEDD-F3A9AB68CA56">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:49:51 UTC</createdTime>
+<generatorID>17C67959-E206-908E-F889-7629AFE54AD1</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>354A7818-CEB1-B5AB-C96F-56CA8E68EFCA</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="school_subject_id" id="D96651C4-5EB7-5C29-167E-A7832EC16D88">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:50:28 UTC</createdTime>
+<generatorID>C7741D02-46E4-E837-D5A1-524A81145746</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>95437018-4C2A-F8FA-4E37-168AAC2EC4D8</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lesson_time_id" id="1A1AE405-1817-FC17-70EE-642EE25FED47">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:51:48 UTC</createdTime>
+<generatorID>CE5A6E84-3002-E14F-D5C4-7D3B982E57FF</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>873B71AD-F77D-3D44-6A01-2EEAEF216987</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="E38DDBD8-17E6-6256-C08B-C73B1F3E9D0A" name="lesson PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:47:35 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>1F70C261-CA28-1202-50C3-3B669C090E06</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>

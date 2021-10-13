@@ -1,0 +1,180 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Table class="oracle.dbtools.crest.model.design.relational.Table" directorySegmentName="seg_0" id="AF5D2339-403A-8BA6-65CB-DB37423A9C55" name="ksch_lesson">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>B84225AC-D6DE-B390-8E16-3856B4F9763F</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<ordsAlias>lesson</ordsAlias>
+<allowColumnReorder>false</allowColumnReorder>
+<existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
+<parsed>true</parsed>
+<columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
+<Column name="id" id="8D2E146B-A12B-1A44-248D-DC4DB17D1364">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>1F70C261-CA28-1202-50C3-3B669C090E06</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="homework" id="6FD2DC7B-C75D-C943-CEA7-7667E911577F">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>10E035AD-E2AD-0CB0-748E-DCE0C7BE80EE</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT040</logicalDatatype>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="class_id" id="4762ABEC-B970-D7B1-8A3D-F0C201322395">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>DF0148FB-1343-97BD-D056-904F14571BD7</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="284E2F4D-4294-F252-04C7-AEC269769C21" referredColumn="FF175640-2E97-2E39-AFC5-F077959CA556"/>
+</associations>
+</Column>
+<Column name="teacher_id" id="3C2EB8BC-5AE6-F694-7A59-2B93F23D73F7">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>B88E593D-7733-2A79-29D5-531BD9421982</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="05099BDC-06B2-F199-38AF-4E0BC6BC7C32" referredColumn="B640B1ED-4008-3F0F-670A-1775B99C82E3"/>
+</associations>
+</Column>
+<Column name="cabinet_id" id="81D619BD-ADC9-61DB-CA20-A62CDE0A0936">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>998353F0-E729-76BB-BEDD-F3A9AB68CA56</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="4586F6BE-3F76-FA82-853D-93D5B9B31F97" referredColumn="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C"/>
+</associations>
+</Column>
+<Column name="school_subject_id" id="E2D155D2-9639-F89B-8B8F-623ACB401915">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>D96651C4-5EB7-5C29-167E-A7832EC16D88</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="2250E395-95B5-E652-53CA-D7D3C802D147" referredColumn="DC871A90-C023-466F-5662-48C8A9183A2F"/>
+</associations>
+</Column>
+<Column name="lesson_time_id" id="F3788BEE-75A8-B9E6-205B-242D86E7750E">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>1A1AE405-1817-FC17-70EE-642EE25FED47</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+<previousColumn>false</previousColumn>
+<autoIncrementCycle>false</autoIncrementCycle>
+<associations>
+<colAssociation fkAssociation="0412063A-0C18-2F24-80CA-ADFFBC27E247" referredColumn="B14E0CB6-C4C0-F544-7FB0-4A4AC4F387EB"/>
+</associations>
+</Column>
+</columns>
+<indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
+<ind_PK_UK id="3471CF7F-B895-0311-825F-F86B3859B3E3" name="lesson_PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>E38DDBD8-17E6-6256-C08B-C73B1F3E9D0A</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<pk>true</pk>
+<indexState>Primary Constraint</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8D2E146B-A12B-1A44-248D-DC4DB17D1364"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9F8AF82B-0F69-11AA-8858-1BD1DB54E21E" name="lesson_cabinet_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>17C67959-E206-908E-F889-7629AFE54AD1</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="81D619BD-ADC9-61DB-CA20-A62CDE0A0936"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="419631A4-5837-12F3-D2F3-0DC0D0DC5831" name="lesson_class_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>547BEEFA-420B-E75B-268A-9433B34063A8</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="4762ABEC-B970-D7B1-8A3D-F0C201322395"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="0AEA3C25-1873-CD81-47F8-5C69F1094CE7" name="lesson_subject_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>C7741D02-46E4-E837-D5A1-524A81145746</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="E2D155D2-9639-F89B-8B8F-623ACB401915"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="10DD39FE-3B21-5C19-419A-F1CE37FC8E6F" name="lesson_teacher_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>E8F60C87-63E8-708D-3A83-D26F5D5047E4</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="3C2EB8BC-5AE6-F694-7A59-2B93F23D73F7"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="B0BB9B4E-22D5-49C8-04CA-1CD42EFBB94A" name="lesson_time_FK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<generatorID>CE5A6E84-3002-E14F-D5C4-7D3B982E57FF</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<indexState>Foreign Key</indexState>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="F3788BEE-75A8-B9E6-205B-242D86E7750E"/>
+</indexColumnUsage>
+</ind_PK_UK>
+</indexes>
+</Table>

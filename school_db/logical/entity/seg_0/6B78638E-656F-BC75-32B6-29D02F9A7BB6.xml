@@ -1,0 +1,101 @@
+<?xml version = '1.0' encoding = 'UTF-8'?>
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B78638E-656F-BC75-32B6-29D02F9A7BB6" name="ksch_journal_entry">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:53:41 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<adequatelyNormalized>NO</adequatelyNormalized>
+<expectedVolumes>0</expectedVolumes>
+<fwdEngineeringStrategyName>Single Table</fwdEngineeringStrategyName>
+<growthPercent>0</growthPercent>
+<growthType>Year</growthType>
+<maxVolumes>9999999</maxVolumes>
+<minVolumes>0</minVolumes>
+<normalForm>Third</normalForm>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<Attribute name="id" id="0FC2C735-C8E6-1453-36BF-B1999A39116C">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:54:03 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="mark" id="BF12C383-06BC-8C5A-12AC-7407C6E5B113">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:54:14 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="attendance" id="CBCB1348-EA59-E244-5C51-DDC98B1AD4AF">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:54:40 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT006</logicalDatatype>
+<dataTypeSize>1</dataTypeSize>
+<ownDataTypeParameters>1,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="student_id" id="20DDDDE0-5A01-5B50-3973-2222491FDCBE">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:55:25 UTC</createdTime>
+<generatorID>B8A3F045-282A-DD44-FF02-11F627CD448C</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>B96C2657-0AF3-C14A-0AF3-B12718A24EC9</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+<Attribute name="lesson_id" id="65F483D0-E1DE-4086-7DC8-E274232D966F">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:56:33 UTC</createdTime>
+<generatorID>5FAF8E92-6BC3-5CE2-FE07-BC042085730B</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<referedAttribute>1F70C261-CA28-1202-50C3-3B669C090E06</referedAttribute>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</Attribute>
+</attributes>
+<identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
+<identifier id="BEE54E96-8C4D-9859-9AA5-5D49A90A6A08" name="journal_entry PK">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-10 15:54:08 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<pk>true</pk>
+<usedAttributes>
+<attributeRef>0FC2C735-C8E6-1453-36BF-B1999A39116C</attributeRef>
+</usedAttributes>
+</identifier>
+</identifiers>
+</Entity>
