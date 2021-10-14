@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="2C74CB56-5C53-03E1-EDCA-FD1C71B3F7D8">
+<Column name="student_id" id="2C74CB56-5C53-03E1-EDCA-FD1C71B3F7D8">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>B96C2657-0AF3-C14A-0AF3-B12718A24EC9</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="parent_mail" id="66D5817D-45FC-1821-469B-E62B96A9E8F2">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[почта для связи с родителями]]></commentInRDBMS>
 <generatorID>542E3DA4-BEA0-7328-4022-BDC053C5E977</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -36,6 +38,7 @@
 <Column name="additional_information" id="43FE3115-15D1-56CE-1BD8-6D4072082F69">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[всякого рода дополнительная информация, заполняемая учеником по желанию]]></commentInRDBMS>
 <generatorID>F8EBCCAD-3455-BDAA-F2F7-891A1C9CF224</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -48,6 +51,7 @@
 <Column name="users_id" id="0840EAB2-7994-ABB2-803F-56C57E7B0EFA">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с пользователем]]></commentInRDBMS>
 <generatorID>A14318AD-C0C8-DD89-0B8D-0278F2D2CD34</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -63,6 +67,7 @@
 <Column name="class_id" id="256B9EDA-3D5C-AE21-9E5C-63375F1284E2">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с классом ]]></commentInRDBMS>
 <generatorID>0B8C7342-039A-3BAC-006A-80479DB80033</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -77,7 +82,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="0F259DD9-26A1-F221-DBBE-995B71F097BF" name="student_PK">
+<ind_PK_UK id="0F259DD9-26A1-F221-DBBE-995B71F097BF" name="pk_student">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>045651C7-A435-5D69-55F1-1D2437580830</generatorID>
@@ -89,7 +94,25 @@
 <colUsage columnID="2C74CB56-5C53-03E1-EDCA-FD1C71B3F7D8"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F957342C-5CD7-D196-47B4-412B9AD5BA78" name="student_class_FK">
+<ind_PK_UK id="F748CE7F-620E-B3F5-CF5E-82828611693A" name="i_student_class_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:10:30 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="256B9EDA-3D5C-AE21-9E5C-63375F1284E2"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="9D22ED22-B14A-C04E-B2FC-CB884EEB58D1" name="i_student_users_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:10:46 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="0840EAB2-7994-ABB2-803F-56C57E7B0EFA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="F957342C-5CD7-D196-47B4-412B9AD5BA78" name="fk_student_class">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>A158297D-3E0D-6904-8162-6CA1202BE54D</generatorID>
@@ -100,7 +123,7 @@
 <colUsage columnID="256B9EDA-3D5C-AE21-9E5C-63375F1284E2"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="559BDD3B-796D-CC9B-7DCB-6C17FF3D1C90" name="student_users_FK">
+<ind_PK_UK id="559BDD3B-796D-CC9B-7DCB-6C17FF3D1C90" name="fk_student_users">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>FC706765-023E-D1DF-0D23-7C2B13AF03FB</generatorID>

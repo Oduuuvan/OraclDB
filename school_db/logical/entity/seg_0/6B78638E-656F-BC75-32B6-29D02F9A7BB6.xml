@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B78638E-656F-BC75-32B6-29D02F9A7BB6" name="ksch_journal_entry">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="6B78638E-656F-BC75-32B6-29D02F9A7BB6" name="ksch journal entry">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:53:41 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,9 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="0FC2C735-C8E6-1453-36BF-B1999A39116C">
+<Attribute name="journal entry id" id="0FC2C735-C8E6-1453-36BF-B1999A39116C">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:54:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -27,9 +28,10 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="mark" id="BF12C383-06BC-8C5A-12AC-7407C6E5B113">
+<Attribute name="mark for lesson" id="BF12C383-06BC-8C5A-12AC-7407C6E5B113">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:54:14 UTC</createdTime>
+<commentInRDBMS><![CDATA[оценка за урок]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -44,6 +46,7 @@
 <Attribute name="attendance" id="CBCB1348-EA59-E244-5C51-DDC98B1AD4AF">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:54:40 UTC</createdTime>
+<commentInRDBMS><![CDATA[присутствие на уроке]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -55,9 +58,10 @@
 <dataTypeSize>1</dataTypeSize>
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="student_id" id="20DDDDE0-5A01-5B50-3973-2222491FDCBE">
+<Attribute name="student id" id="20DDDDE0-5A01-5B50-3973-2222491FDCBE">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:55:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с учеником]]></commentInRDBMS>
 <generatorID>B8A3F045-282A-DD44-FF02-11F627CD448C</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
@@ -69,9 +73,10 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="lesson_id" id="65F483D0-E1DE-4086-7DC8-E274232D966F">
+<Attribute name="lesson id" id="65F483D0-E1DE-4086-7DC8-E274232D966F">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:56:33 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с уроком]]></commentInRDBMS>
 <generatorID>5FAF8E92-6BC3-5CE2-FE07-BC042085730B</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
@@ -83,9 +88,25 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
+<Attribute name="mark for hw" id="4100461E-952F-25C1-35FF-7C41310D45A3">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-14 10:32:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[оценка за домашнюю работу]]></commentInRDBMS>
+<generatorID>DA0FAAF1-5906-E215-3FB5-8707E7D75895</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+</Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="BEE54E96-8C4D-9859-9AA5-5D49A90A6A08" name="journal_entry PK">
+<identifier id="BEE54E96-8C4D-9859-9AA5-5D49A90A6A08" name="pk_journal_entry">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:54:08 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>

@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C">
+<Column name="cabinet_id" id="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[сурогатный первичный ключ]]></commentInRDBMS>
 <generatorID>354A7818-CEB1-B5AB-C96F-56CA8E68EFCA</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="cabinet_number" id="555B0DDA-56AF-D641-3FE8-54A7BF8EBCB8">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[номер кабинета]]></commentInRDBMS>
 <generatorID>4028FF28-3B3C-7CB8-04AA-AA880FCA5D9E</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -35,6 +37,7 @@
 <Column name="campus" id="9027F00A-474A-F4C8-D73E-B36F086F67D9">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[учебный корпус (может быть null, если в школе нет такого разделения)]]></commentInRDBMS>
 <generatorID>4C65BAB8-6D54-18D3-A497-E4850CD771D1</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -48,6 +51,7 @@
 <Column name="school_id" id="AA765244-2CC1-7B81-8ABE-F18393B524C5">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи со школой]]></commentInRDBMS>
 <generatorID>32FD4536-FBEA-AA2B-FCF3-86509D1B6300</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -62,7 +66,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="8E5FF62B-600A-6991-6C10-3763EA3DDE9B" name="cabinet_PK">
+<ind_PK_UK id="8E5FF62B-600A-6991-6C10-3763EA3DDE9B" name="pk_cabinet">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>AFF40884-F6EA-8741-BE76-73C2F30A81D0</generatorID>
@@ -74,7 +78,16 @@
 <colUsage columnID="6FF0821A-0F77-3698-B0E7-5AE8C0DE5F5C"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="2796CAC3-2191-7428-7AB1-0E16D1571618" name="cabinet_school_FK">
+<ind_PK_UK id="0C5C559D-9926-6BF8-7776-26E0D7CE90AE" name="i_cabinet_school_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:16:35 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="AA765244-2CC1-7B81-8ABE-F18393B524C5"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2796CAC3-2191-7428-7AB1-0E16D1571618" name="fk_cabinet_school">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>F1DC442F-A75E-201A-C6FA-D116D75B4E36</generatorID>

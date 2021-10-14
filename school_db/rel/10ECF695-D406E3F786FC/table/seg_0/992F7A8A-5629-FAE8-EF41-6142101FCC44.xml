@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="FF175640-2E97-2E39-AFC5-F077959CA556">
+<Column name="class_id" id="FF175640-2E97-2E39-AFC5-F077959CA556">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>3C9E6A77-E605-F956-E2B1-28153E6DF2F1</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="start_year" id="B204F98A-9E8D-9BDF-3D16-C80BFF5CDC81">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[год создания класса]]></commentInRDBMS>
 <generatorID>71B9D4D7-2AC0-5288-6E47-2383E8384A54</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,6 +36,7 @@
 <Column name="end_year" id="D0E7450F-2064-35C0-A3A5-AFEF4E0CFBA6">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[предполагаемы год выпуска]]></commentInRDBMS>
 <generatorID>17952BFF-7005-837C-769E-456A222D71C2</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -45,6 +48,7 @@
 <Column name="name" id="1C98B68F-C821-A89E-77B4-03E3B0B56016">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[буква класса]]></commentInRDBMS>
 <generatorID>BC081200-405D-63D0-3FE3-BA4F019E1753</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -57,6 +61,7 @@
 <Column name="year_of_study" id="8AE9C463-301C-500F-EE54-428C11382478">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[год обучения]]></commentInRDBMS>
 <generatorID>CAE4F99C-91C1-77CE-7B7B-769462DDAFC0</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -70,6 +75,7 @@
 <Column name="teacher_id" id="8C5EEF65-02FC-0590-95E6-6D2D1860F435">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[классный руководитель, представленный внешним ключом на таблицу teacher ]]></commentInRDBMS>
 <generatorID>9D2DA31E-93B5-72D7-4CC3-9146A90CD33D</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -85,6 +91,7 @@
 <Column name="school_id" id="26BC330B-C9AE-4F89-4C2F-0CD24FAEDBDA">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи со школой]]></commentInRDBMS>
 <generatorID>44E81613-DBAE-998D-BAD3-3020D4CE17D1</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -99,7 +106,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="212465DB-6DDD-67F9-090A-7B63691BDE62" name="class_PK">
+<ind_PK_UK id="212465DB-6DDD-67F9-090A-7B63691BDE62" name="pk_class">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>9E51E6F3-FF5A-EF6D-E09E-E25F4AAA756C</generatorID>
@@ -111,7 +118,25 @@
 <colUsage columnID="FF175640-2E97-2E39-AFC5-F077959CA556"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="3A9E560D-5BE6-154F-695E-F9C98505C0F7" name="class_school_FK">
+<ind_PK_UK id="1E693320-B838-0E15-FF8C-E0E092107E3B" name="i_class_teacher_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:08:58 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="8C5EEF65-02FC-0590-95E6-6D2D1860F435"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="12203822-083B-5072-EC71-DAB09D9EC170" name="i_class_school_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:09:33 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="26BC330B-C9AE-4F89-4C2F-0CD24FAEDBDA"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="3A9E560D-5BE6-154F-695E-F9C98505C0F7" name="fk_class_school">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>085C0B61-5B72-9AD7-6EA5-95DD1F4C0621</generatorID>
@@ -122,7 +147,7 @@
 <colUsage columnID="26BC330B-C9AE-4F89-4C2F-0CD24FAEDBDA"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="04871317-4067-43FC-ADDA-BF227809E174" name="class_teacher_FK">
+<ind_PK_UK id="04871317-4067-43FC-ADDA-BF227809E174" name="fk_class_teacher">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>9C1FF235-FB3E-5CBD-8768-8A21D65D1CD7</generatorID>

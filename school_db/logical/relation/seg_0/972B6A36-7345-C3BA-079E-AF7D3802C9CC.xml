@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="teacher_to_subject" directorySegmentName="seg_0" id="972B6A36-7345-C3BA-079E-AF7D3802C9CC">
+<Relation class="oracle.dbtools.crest.model.design.logical.Relation" name="kmtm_teacher_subject" directorySegmentName="seg_0" id="972B6A36-7345-C3BA-079E-AF7D3802C9CC">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:31:29 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,4 +15,32 @@
 <targetEntity>7AEA75DA-CF17-645A-9F58-13D08FED9F87</targetEntity>
 <transferable>true</transferable>
 <deleteRule>NO ACTION</deleteRule>
+<attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
+<attribute name="teacher id" id="6C58790E-5140-5431-22A6-B3376A1E6921">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-14 10:32:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с учителем]]></commentInRDBMS>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+<attribute name="school subject id" id="E96EB429-FDD2-AF5C-2178-4A359D2228C8">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-14 10:32:55 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с предметом]]></commentInRDBMS>
+<ownerDesignName>school_db</ownerDesignName>
+<engineerTo>
+<item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
+</engineerTo>
+<use>0</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
+<ownDataTypeParameters>,,</ownDataTypeParameters>
+</attribute>
+</attributes>
 </Relation>

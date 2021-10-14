@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7AEA75DA-CF17-645A-9F58-13D08FED9F87" name="ksch_school_subject">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="7AEA75DA-CF17-645A-9F58-13D08FED9F87" name="ksch school subject">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:28:28 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,9 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="95437018-4C2A-F8FA-4E37-168AAC2EC4D8">
+<Attribute name="school subject id" id="95437018-4C2A-F8FA-4E37-168AAC2EC4D8">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:28:42 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -30,6 +31,7 @@
 <Attribute name="name" id="A38A5E01-C2CD-78C6-2486-E888376181A1">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:28:43 UTC</createdTime>
+<commentInRDBMS><![CDATA[название предмета]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -43,7 +45,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="2D9D8AF6-9246-7698-DF3B-EE95136A1EA1" name="school_subject PK">
+<identifier id="2D9D8AF6-9246-7698-DF3B-EE95136A1EA1" name="pk_school_subject">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:28:51 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>

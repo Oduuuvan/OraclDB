@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="B640B1ED-4008-3F0F-670A-1775B99C82E3">
+<Column name="teacher_id" id="B640B1ED-4008-3F0F-670A-1775B99C82E3">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>D9D4DF98-E1B1-D079-D10D-373E484E91EE</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -20,22 +21,10 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="education" id="533BDAB8-1F77-E2BA-487D-1158CBD2BDC7">
-<createdBy>Vladik</createdBy>
-<createdTime>2021-10-10 13:32:44 UTC</createdTime>
-<generatorID>E3FC0BA1-7F77-A2E4-AA35-966C6B06703A</generatorID>
-<ownerDesignName>school_db</ownerDesignName>
-<nullsAllowed>true</nullsAllowed>
-<useDomainConstraints>false</useDomainConstraints>
-<use>1</use>
-<logicalDatatype>LOGDT024</logicalDatatype>
-<dataTypeSize>45</dataTypeSize>
-<ownDataTypeParameters>45,,</ownDataTypeParameters>
-<autoIncrementCycle>false</autoIncrementCycle>
-</Column>
 <Column name="work_experience" id="DE52512E-4F30-6211-ADD1-BBD56717AB33">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[стаж работы]]></commentInRDBMS>
 <generatorID>73B82C12-14B7-07E2-4ABA-7CBA5B3143AC</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -46,21 +35,24 @@
 <ownDataTypeParameters>45,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="fk" id="63F027C7-720F-42DF-9CD1-E972AADC5602">
+<Column name="education" id="533BDAB8-1F77-E2BA-487D-1158CBD2BDC7">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
-<generatorID>8BE1413D-232F-CC82-8F78-87017A7DBE5E</generatorID>
+<commentInRDBMS><![CDATA[образование преподавателя]]></commentInRDBMS>
+<generatorID>E3FC0BA1-7F77-A2E4-AA35-966C6B06703A</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
-<use>0</use>
-<logicalDatatype>LOGDT019</logicalDatatype>
-<domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT024</logicalDatatype>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
 <Column name="users_id" id="12E89964-A18C-ACE2-F479-17E33283690D">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с пользователем]]></commentInRDBMS>
 <generatorID>E6E1727A-2F1F-98A8-9188-E9F2EDFA9B15</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -76,6 +68,7 @@
 <Column name="school_id" id="23BE2DCE-B61E-DFE6-7FBE-3C45D5386940">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:46:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи со школой]]></commentInRDBMS>
 <generatorID>C76C7371-A4D2-6D0F-6CDB-C5557144CBC3</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -90,7 +83,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="01ED9E31-CAF9-D054-C68E-FE45AC9157F7" name="teacher_PK">
+<ind_PK_UK id="01ED9E31-CAF9-D054-C68E-FE45AC9157F7" name="pk_teacher">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
 <generatorID>93F1BA40-7F5C-369A-7EB8-F57DA6CC6475</generatorID>
@@ -102,7 +95,25 @@
 <colUsage columnID="B640B1ED-4008-3F0F-670A-1775B99C82E3"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="50976A54-A4BF-C208-4C29-ED793F6A17DC" name="teacher_users_FK">
+<ind_PK_UK id="078786D0-3CD0-1AF4-3517-A42A6931DF0B" name="i_teacher_users_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 15:59:23 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="12E89964-A18C-ACE2-F479-17E33283690D"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="2D785326-8231-A230-8F3F-97A2BF8CDDDB" name="i_teacher_school_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 15:59:52 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="23BE2DCE-B61E-DFE6-7FBE-3C45D5386940"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="50976A54-A4BF-C208-4C29-ED793F6A17DC" name="fk_teacher_users">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
 <generatorID>3925482C-B5E9-C7EF-4E58-71DFD03B07AE</generatorID>
@@ -113,7 +124,7 @@
 <colUsage columnID="12E89964-A18C-ACE2-F479-17E33283690D"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="D749DF66-847A-DC2E-9875-971D6496561C" name="teacher_school_FK">
+<ind_PK_UK id="D749DF66-847A-DC2E-9875-971D6496561C" name="fk_teacher_school">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:46:47 UTC</createdTime>
 <generatorID>98E443DC-93EF-9A8C-DC63-74EDA0D9EC49</generatorID>

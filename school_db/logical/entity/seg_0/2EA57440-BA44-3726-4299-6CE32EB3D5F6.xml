@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EA57440-BA44-3726-4299-6CE32EB3D5F6" name="ksch_cabinet">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="2EA57440-BA44-3726-4299-6CE32EB3D5F6" name="ksch cabinet">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:24:18 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,9 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="354A7818-CEB1-B5AB-C96F-56CA8E68EFCA">
+<Attribute name="cabinet id" id="354A7818-CEB1-B5AB-C96F-56CA8E68EFCA">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:24:41 UTC</createdTime>
+<commentInRDBMS><![CDATA[сурогатный первичный ключ]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -27,9 +28,10 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="cabinet_number" id="4028FF28-3B3C-7CB8-04AA-AA880FCA5D9E">
+<Attribute name="cabinet number" id="4028FF28-3B3C-7CB8-04AA-AA880FCA5D9E">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:24:52 UTC</createdTime>
+<commentInRDBMS><![CDATA[номер кабинета]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -43,6 +45,7 @@
 <Attribute name="campus" id="4C65BAB8-6D54-18D3-A497-E4850CD771D1">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:25:25 UTC</createdTime>
+<commentInRDBMS><![CDATA[учебный корпус (может быть null, если в школе нет такого разделения)]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -54,9 +57,10 @@
 <dataTypeSize>20</dataTypeSize>
 <ownDataTypeParameters>20,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="school_id" id="32FD4536-FBEA-AA2B-FCF3-86509D1B6300">
+<Attribute name="school id" id="32FD4536-FBEA-AA2B-FCF3-86509D1B6300">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:27:03 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи со школой]]></commentInRDBMS>
 <generatorID>F1DC442F-A75E-201A-C6FA-D116D75B4E36</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
@@ -70,7 +74,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="AFF40884-F6EA-8741-BE76-73C2F30A81D0" name="cabinet PK">
+<identifier id="AFF40884-F6EA-8741-BE76-73C2F30A81D0" name="pk_cabinet">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:24:49 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>

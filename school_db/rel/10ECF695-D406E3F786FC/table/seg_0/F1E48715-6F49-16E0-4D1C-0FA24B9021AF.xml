@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="FC28A88F-47FC-5F68-4AE9-2FDACD56736F">
+<Column name="journal_entry_id" id="FC28A88F-47FC-5F68-4AE9-2FDACD56736F">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>0FC2C735-C8E6-1453-36BF-B1999A39116C</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -20,10 +21,24 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="mark" id="B524B99A-58E7-EEA5-FB3A-AFBC6D8BDF7C">
+<Column name="mark_for_lesson" id="B524B99A-58E7-EEA5-FB3A-AFBC6D8BDF7C">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[оценка за урок]]></commentInRDBMS>
 <generatorID>BF12C383-06BC-8C5A-12AC-7407C6E5B113</generatorID>
+<ownerDesignName>school_db</ownerDesignName>
+<nullsAllowed>true</nullsAllowed>
+<useDomainConstraints>false</useDomainConstraints>
+<use>1</use>
+<logicalDatatype>LOGDT019</logicalDatatype>
+<dataTypePrecision>2</dataTypePrecision>
+<ownDataTypeParameters>,2,</ownDataTypeParameters>
+<autoIncrementCycle>false</autoIncrementCycle>
+</Column>
+<Column name="mark_for_hw" id="DA0FAAF1-5906-E215-3FB5-8707E7D75895">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-14 10:23:47 UTC</createdTime>
+<commentInRDBMS><![CDATA[оценка за домашнюю работу]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
 <useDomainConstraints>false</useDomainConstraints>
@@ -36,6 +51,7 @@
 <Column name="attendance" id="29A3A674-8261-16A1-1A33-C6145AC6483C">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[присутствие на уроке]]></commentInRDBMS>
 <generatorID>CBCB1348-EA59-E244-5C51-DDC98B1AD4AF</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -49,6 +65,7 @@
 <Column name="student_id" id="FC884C4C-E9E5-604E-48C5-9494737D66E4">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с учеником]]></commentInRDBMS>
 <generatorID>20DDDDE0-5A01-5B50-3973-2222491FDCBE</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -64,6 +81,7 @@
 <Column name="lesson_id" id="C953DE98-5C62-9D86-87A9-9D65C5A5BC47">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с уроком]]></commentInRDBMS>
 <generatorID>65F483D0-E1DE-4086-7DC8-E274232D966F</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -78,7 +96,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="0A6DD833-033A-3DAD-6A07-CE9F433F3802" name="journal_entry_PK">
+<ind_PK_UK id="0A6DD833-033A-3DAD-6A07-CE9F433F3802" name="pk_journal_entry">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
 <generatorID>BEE54E96-8C4D-9859-9AA5-5D49A90A6A08</generatorID>
@@ -90,7 +108,25 @@
 <colUsage columnID="FC28A88F-47FC-5F68-4AE9-2FDACD56736F"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="73F60F77-65AF-DE67-E448-CD5FEF60F371" name="journal_lesson_FK">
+<ind_PK_UK id="D46BD209-78EB-C594-4012-D2C0CB71FC21" name="i_journal_student_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:15:09 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="FC884C4C-E9E5-604E-48C5-9494737D66E4"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="16B96A9E-97BB-1CDA-6A91-BAA116105E44" name="i_journal_lesson_id">
+<createdBy>Vladik</createdBy>
+<createdTime>2021-10-13 16:15:33 UTC</createdTime>
+<ownerDesignName>school_db</ownerDesignName>
+<isSurrogateKey>false</isSurrogateKey>
+<indexColumnUsage>
+<colUsage columnID="C953DE98-5C62-9D86-87A9-9D65C5A5BC47"/>
+</indexColumnUsage>
+</ind_PK_UK>
+<ind_PK_UK id="73F60F77-65AF-DE67-E448-CD5FEF60F371" name="fk_journal_lesson">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
 <generatorID>5FAF8E92-6BC3-5CE2-FE07-BC042085730B</generatorID>
@@ -101,7 +137,7 @@
 <colUsage columnID="C953DE98-5C62-9D86-87A9-9D65C5A5BC47"/>
 </indexColumnUsage>
 </ind_PK_UK>
-<ind_PK_UK id="F1D67518-5928-E9E4-51DF-68E44DCD3326" name="journal_student_FK">
+<ind_PK_UK id="F1D67518-5928-E9E4-51DF-68E44DCD3326" name="fk_journal_student">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
 <generatorID>B8A3F045-282A-DD44-FF02-11F627CD448C</generatorID>

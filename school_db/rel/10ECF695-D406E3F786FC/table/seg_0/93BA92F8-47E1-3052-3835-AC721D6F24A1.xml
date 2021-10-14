@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="9A18CF26-CC54-AE87-3601-1CEEF74F3A74">
+<Column name="users_id" id="9A18CF26-CC54-AE87-3601-1CEEF74F3A74">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>884543C9-D357-1E57-08EF-7461F12080C8</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="is_superuser" id="DCD3315B-A231-C795-C8C2-50BAAD7A69D6">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[обладает ли пользователь правами администратора]]></commentInRDBMS>
 <generatorID>4D798061-2C46-DB08-A64D-DC425712B1B3</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -32,10 +34,11 @@
 <ownDataTypeParameters>1,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="name" id="ED54A9EA-A3C8-2DBF-2713-A056666204BD">
+<Column name="surname" id="76166482-35B7-14CB-AF8C-EB58E2417F08">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
-<generatorID>632F9701-1D5C-136F-BC53-13D8698D2C1C</generatorID>
+<commentInRDBMS><![CDATA[фамилия]]></commentInRDBMS>
+<generatorID>37436159-DB4C-1929-E666-65016D1DD74A</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -43,10 +46,11 @@
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 <autoIncrementCycle>false</autoIncrementCycle>
 </Column>
-<Column name="surname" id="76166482-35B7-14CB-AF8C-EB58E2417F08">
+<Column name="name" id="ED54A9EA-A3C8-2DBF-2713-A056666204BD">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
-<generatorID>37436159-DB4C-1929-E666-65016D1DD74A</generatorID>
+<commentInRDBMS><![CDATA[имя]]></commentInRDBMS>
+<generatorID>632F9701-1D5C-136F-BC53-13D8698D2C1C</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
@@ -57,6 +61,7 @@
 <Column name="patronymic" id="560EEE49-922B-FFF9-AF7D-B9E6A8D6534E">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[отчество]]></commentInRDBMS>
 <generatorID>3C660539-73F7-4B4E-02A3-5D7E4FAB67A6</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -69,6 +74,7 @@
 <Column name="mail" id="FC2D94B3-C690-3269-2998-20B899D387A3">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[электронная почта пользователя]]></commentInRDBMS>
 <generatorID>0A19F3D9-50F9-A0FC-4A14-363F64347DBB</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -82,6 +88,7 @@
 <Column name="username" id="14968B72-21D9-C3B2-1602-B35C27E834DE">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[логин пользователя (никнейм)]]></commentInRDBMS>
 <generatorID>8DF00D66-E25B-14F1-6975-951C5AD2137D</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -94,6 +101,7 @@
 <Column name="password" id="56B76CF1-7990-FBB8-4DDB-4D23B1555ED4">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[пароль ]]></commentInRDBMS>
 <generatorID>7C675E7A-D920-6486-443C-7560FF281A8C</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -106,6 +114,7 @@
 <Column name="is_active" id="11ACA7B3-EF41-9816-2119-2F08350A0D0A">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[активен пользователь или нет]]></commentInRDBMS>
 <generatorID>046AFE5E-74C6-D5A5-A240-83A14132D47D</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -118,6 +127,7 @@
 <Column name="last_login" id="23D07424-BF33-44A5-BF20-0E7DC8356D3E">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
+<commentInRDBMS><![CDATA[дата и время последнего входа]]></commentInRDBMS>
 <generatorID>20AD0B7B-D2E6-4B6C-1F28-6F3C17C89B85</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -128,7 +138,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="2DF6E896-A85B-F31E-BDDE-09274D096244" name="users_PK">
+<ind_PK_UK id="2DF6E896-A85B-F31E-BDDE-09274D096244" name="pk_users">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:32:44 UTC</createdTime>
 <generatorID>4F37A026-4999-A983-C145-8A277E58858B</generatorID>

@@ -1,16 +1,16 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05099BDC-06B2-F199-38AF-4E0BC6BC7C32" containerWithKeyObject="AF5D2339-403A-8BA6-65CB-DB37423A9C55" localFKIndex="10DD39FE-3B21-5C19-419A-F1CE37FC8E6F" name="lesson_teacher_FK">
+<FKIndexAssociation class="oracle.dbtools.crest.model.design.relational.FKIndexAssociation" directorySegmentName="seg_0" id="05099BDC-06B2-F199-38AF-4E0BC6BC7C32" containerWithKeyObject="AF5D2339-403A-8BA6-65CB-DB37423A9C55" localFKIndex="10DD39FE-3B21-5C19-419A-F1CE37FC8E6F" name="fk_lesson_teacher">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
 <generatorID>E8F60C87-63E8-708D-3A83-D26F5D5047E4</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
-<referredTableLongName>teacher</referredTableLongName>
+<referredTableLongName>ksch_teacher</referredTableLongName>
 <deleteRule>NO ACTION</deleteRule>
 <referredTableID>3805DA87-50CC-A608-7224-066AA242254A</referredTableID>
 <keyObject>01ED9E31-CAF9-D054-C68E-FE45AC9157F7</keyObject>
 <referredKeyID>01ED9E31-CAF9-D054-C68E-FE45AC9157F7</referredKeyID>
 <mandatory>true</mandatory>
-<refColNames>id</refColNames>
+<refColNames>teacher_id</refColNames>
 <transferable>true</transferable>
 <rely>false</rely>
 <columnDependencyConstraintGenerateInDDL>true</columnDependencyConstraintGenerateInDDL>

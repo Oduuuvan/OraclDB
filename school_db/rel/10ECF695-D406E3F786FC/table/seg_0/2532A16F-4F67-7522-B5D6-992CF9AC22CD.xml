@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="session_key" id="CA7483FD-FC32-4146-6BD9-DA4BA7778F67">
+<Column name="session_id" id="CA7483FD-FC32-4146-6BD9-DA4BA7778F67">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[естественный первичный ключ (ключ сессии)]]></commentInRDBMS>
 <generatorID>BFD6A7ED-6731-3C36-B0E1-BC15E2586C0B</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="session_data" id="AA82231B-59F8-3B47-F8C3-2B66451B1243">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[данные сессии]]></commentInRDBMS>
 <generatorID>D43DCC01-498B-8715-B7F0-EA0D38EE3E19</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <useDomainConstraints>false</useDomainConstraints>
@@ -34,6 +36,7 @@
 <Column name="expire_time" id="7A9754BA-D905-F892-98FC-E8404E5E3A09">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
+<commentInRDBMS><![CDATA[дата окончания действия сессии]]></commentInRDBMS>
 <generatorID>2A470192-4694-ECA9-5A80-7340F6D143B2</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -45,7 +48,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="DFE09485-4028-1443-CFF5-9F05232C1750" name="session_PK">
+<ind_PK_UK id="DFE09485-4028-1443-CFF5-9F05232C1750" name="pk_session">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 16:01:00 UTC</createdTime>
 <generatorID>D58561B8-82CF-3F21-A492-8DF5899A991B</generatorID>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CCAC813F-D935-1175-6B6D-C3D0B12EF092" name="knet_session">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="CCAC813F-D935-1175-6B6D-C3D0B12EF092" name="knet session">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:57:21 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,9 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="session_key" id="BFD6A7ED-6731-3C36-B0E1-BC15E2586C0B">
+<Attribute name="session id" id="BFD6A7ED-6731-3C36-B0E1-BC15E2586C0B">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:57:35 UTC</createdTime>
+<commentInRDBMS><![CDATA[естественный первичный ключ (ключ сессии)]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -27,9 +28,10 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="session_data" id="D43DCC01-498B-8715-B7F0-EA0D38EE3E19">
+<Attribute name="session data" id="D43DCC01-498B-8715-B7F0-EA0D38EE3E19">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:57:51 UTC</createdTime>
+<commentInRDBMS><![CDATA[данные сессии]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -39,9 +41,10 @@
 <logicalDatatype>LOGDT040</logicalDatatype>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="expire_time" id="2A470192-4694-ECA9-5A80-7340F6D143B2">
+<Attribute name="expire time" id="2A470192-4694-ECA9-5A80-7340F6D143B2">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:58:13 UTC</createdTime>
+<commentInRDBMS><![CDATA[дата окончания действия сессии]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -54,7 +57,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="D58561B8-82CF-3F21-A492-8DF5899A991B" name="session PK">
+<identifier id="D58561B8-82CF-3F21-A492-8DF5899A991B" name="pk_session">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:57:46 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>

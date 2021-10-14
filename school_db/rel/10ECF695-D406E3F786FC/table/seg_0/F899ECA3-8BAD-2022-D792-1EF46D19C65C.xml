@@ -9,9 +9,10 @@
 <existDependencyGenerateInDDl>true</existDependencyGenerateInDDl>
 <parsed>true</parsed>
 <columns itemClass="oracle.dbtools.crest.model.design.relational.Column">
-<Column name="id" id="DC871A90-C023-466F-5662-48C8A9183A2F">
+<Column name="school_subject_id" id="DC871A90-C023-466F-5662-48C8A9183A2F">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <generatorID>95437018-4C2A-F8FA-4E37-168AAC2EC4D8</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <use>0</use>
@@ -23,6 +24,7 @@
 <Column name="name" id="08DA409E-E11F-3CD3-52A8-126901CE7F7A">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
+<commentInRDBMS><![CDATA[название предмета]]></commentInRDBMS>
 <generatorID>A38A5E01-C2CD-78C6-2486-E888376181A1</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <nullsAllowed>true</nullsAllowed>
@@ -35,7 +37,7 @@
 </Column>
 </columns>
 <indexes itemClass="oracle.dbtools.crest.model.design.relational.Index">
-<ind_PK_UK id="60F908EB-18E7-6B1E-FF24-12FE79E65DD1" name="school_subject_PK">
+<ind_PK_UK id="60F908EB-18E7-6B1E-FF24-12FE79E65DD1" name="pk_school_subject">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 15:32:17 UTC</createdTime>
 <generatorID>2D9D8AF6-9246-7698-DF3B-EE95136A1EA1</generatorID>

@@ -1,5 +1,5 @@
 <?xml version = '1.0' encoding = 'UTF-8'?>
-<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86BC7E8A-CC42-9718-AFDB-6D0D5783468B" name="ksch_teacher">
+<Entity class="oracle.dbtools.crest.model.design.logical.Entity" directorySegmentName="seg_0" id="86BC7E8A-CC42-9718-AFDB-6D0D5783468B" name="ksch teacher">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:20:47 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
@@ -15,9 +15,10 @@
 <minVolumes>0</minVolumes>
 <normalForm>Third</normalForm>
 <attributes itemClass="oracle.dbtools.crest.model.design.logical.Attribute">
-<Attribute name="id" id="D9D4DF98-E1B1-D079-D10D-373E484E91EE">
+<Attribute name="teacher id" id="D9D4DF98-E1B1-D079-D10D-373E484E91EE">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:21:12 UTC</createdTime>
+<commentInRDBMS><![CDATA[суррогатный первичный ключ]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -30,6 +31,7 @@
 <Attribute name="education" id="E3FC0BA1-7F77-A2E4-AA35-966C6B06703A">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:21:20 UTC</createdTime>
+<commentInRDBMS><![CDATA[образование преподавателя]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -38,11 +40,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="work_experience" id="73B82C12-14B7-07E2-4ABA-7CBA5B3143AC">
+<Attribute name="work experience" id="73B82C12-14B7-07E2-4ABA-7CBA5B3143AC">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:21:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[стаж работы]]></commentInRDBMS>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
 <item key="10ECF695-D055-B070-DE67-D406E3F786FC" value="true"/>
@@ -51,11 +55,13 @@
 <useDomainConstraints>false</useDomainConstraints>
 <use>1</use>
 <logicalDatatype>LOGDT024</logicalDatatype>
-<ownDataTypeParameters>,,</ownDataTypeParameters>
+<dataTypeSize>45</dataTypeSize>
+<ownDataTypeParameters>45,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="users_id" id="E6E1727A-2F1F-98A8-9188-E9F2EDFA9B15">
+<Attribute name="users id" id="E6E1727A-2F1F-98A8-9188-E9F2EDFA9B15">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:31:45 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи с пользователем]]></commentInRDBMS>
 <generatorID>3925482C-B5E9-C7EF-4E58-71DFD03B07AE</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
@@ -67,9 +73,10 @@
 <domain>8306AFB7-0F06-F806-A64C-6E44155A170C</domain>
 <ownDataTypeParameters>,,</ownDataTypeParameters>
 </Attribute>
-<Attribute name="school_id" id="C76C7371-A4D2-6D0F-6CDB-C5557144CBC3">
+<Attribute name="school id" id="C76C7371-A4D2-6D0F-6CDB-C5557144CBC3">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:45:39 UTC</createdTime>
+<commentInRDBMS><![CDATA[внешний ключ для связи со школой]]></commentInRDBMS>
 <generatorID>98E443DC-93EF-9A8C-DC63-74EDA0D9EC49</generatorID>
 <ownerDesignName>school_db</ownerDesignName>
 <engineerTo>
@@ -83,7 +90,7 @@
 </Attribute>
 </attributes>
 <identifiers itemClass="oracle.dbtools.crest.model.design.logical.CandidateKey">
-<identifier id="93F1BA40-7F5C-369A-7EB8-F57DA6CC6475" name="teacher PK">
+<identifier id="93F1BA40-7F5C-369A-7EB8-F57DA6CC6475" name="pk_teacher">
 <createdBy>Vladik</createdBy>
 <createdTime>2021-10-10 13:21:19 UTC</createdTime>
 <ownerDesignName>school_db</ownerDesignName>
