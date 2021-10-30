@@ -1,16 +1,16 @@
-/*Р Р°Р·СЂР°Р±РѕС‚Р°С‚СЊ РЅР°Р±РѕСЂ РїСЂРѕС†РµРґСѓСЂ РІ СЂР°РјРєР°С… РїР°РєРµС‚Р° РґР»СЏ С„РѕСЂРјРёСЂРѕРІР°РЅРёСЏ РЅР°РїРѕР»РЅРµРЅРёСЏ С‚Р°Р±Р»РёС†. 
-РќР° РєР°Р¶РґСѓСЋ С‚Р°Р±Р»РёС†Сѓ - СЃРІРѕР№ РїР°РєРµС‚ (PKG_%tablename%). 
-РџСЂРѕС†РµРґСѓСЂС‹ РґРѕР»Р¶РЅС‹: РѕР±СЂР°Р±Р°С‚С‹РІР°С‚СЊ РёСЃРєР»СЋС‡РµРЅРёСЏ (РІ С‚.С‡. Рё РїРѕР»СЊР·РѕРІР°С‚РµР»СЊСЃРєРёРµ),
-РІРѕР·РІСЂР°С‰Р°С‚СЊ РєРѕРґ (0 - РІСЃРµ С…РѕСЂРѕС€Рѕ, РЅРµ 0 - РїСЂРѕРёР·РѕС€Р»Р° РѕС€РёР±РєР°) Рё СЃРѕРѕР±С‰РµРЅРёРµ РѕР± РѕС€РёР±РєРµ,
-РґР»СЏ РѕРїРµСЂР°С†РёРё РІСЃС‚Р°РІРєРё РІРѕР·РІСЂР°С‰Р°С‚СЊ Р·РЅР°С‡РµРЅРёРµ РїРµСЂРІРёС‡РЅРѕРіРѕ РєР»СЋС‡Р°, РїРѕР»СѓС‡РµРЅРЅРѕРіРѕ РїСЂРё РїРѕРјРѕС‰Рё С‚СЂРёРіРіРµСЂР°
-РїР°СЂР°РјРµС‚СЂС‹ РІ РїСЂРѕС†РµРґСѓСЂР°С… РїР°РєРµС‚Р° РЅР°Р·С‹РІР°С‚СЊ РєР°Рє p_..РёРјСЏ.РїРѕР»СЏ
-С„СѓРЅРєС†РёРё РїР°РєРµС‚Р° РЅР°Р·С‹РІР°С‚СЊ f_...
-РїСЂРѕС†РµРґСѓСЂС‹ РїР°РєРµС‚Р° РЅР°Р·С‹РІР°С‚СЊ p_...
-РѕС‚С„РѕСЂРјР°С‚РёСЂРѕРІР°С‚СЊ РїР°РєРµС‚ РєСЂР°СЃРёРІРѕ, Р° РЅРµ РєР°Рє "РєСѓСЂРёС†Р° Р»Р°РїРѕР№"*/
+/*Разработать набор процедур в рамках пакета для формирования наполнения таблиц. 
+На каждую таблицу - свой пакет (PKG_%tablename%). 
+Процедуры должны: обрабатывать исключения (в т.ч. и пользовательские),
+возвращать код (0 - все хорошо, не 0 - произошла ошибка) и сообщение об ошибке,
+для операции вставки возвращать значение первичного ключа, полученного при помощи триггера
+параметры в процедурах пакета называть как p_..имя.поля
+функции пакета называть f_...
+процедуры пакета называть p_...
+отформатировать пакет красиво, а не как "курица лапой"*/
 
 -------------------------------------------------------------------
 -------------------------------------------------------------------
---РЎРїРµС†РёС„РёРєР°С†РёСЏ РїР°РєРµС‚Р° pkg_users
+--Спецификация пакета pkg_users
 create or replace NONEDITIONABLE PACKAGE pkg_users IS
     FUNCTION f_create_row (
         p_is_superuser IN NUMBER,
@@ -57,9 +57,9 @@ create or replace NONEDITIONABLE PACKAGE pkg_users IS
 END pkg_users;
 
 -------------------------------------------------------------------
---РўРµР»Рѕ РїР°РєРµС‚Р° pkg_users
+--Тело пакета pkg_users
 create or replace NONEDITIONABLE PACKAGE BODY pkg_users IS
-    --Р РµР°Р»РёР·Р°Р°С†РёСЏ С„СѓРЅРєС†РёРё РІСЃС‚Р°РІРєРё
+    --Реализаация функции вставки
     FUNCTION f_create_row (
         p_is_superuser IN NUMBER,
         p_surname      IN VARCHAR2,
@@ -97,7 +97,7 @@ create or replace NONEDITIONABLE PACKAGE BODY pkg_users IS
             RETURN NULL;
     END f_create_row;
     
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ С‡С‚РµРЅРёСЏ
+    --Реализация процедуры чтения
     PROCEDURE p_read_row (
         p_id         IN NUMBER,
         p_out_row    OUT knet_users%rowtype,
@@ -120,7 +120,7 @@ create or replace NONEDITIONABLE PACKAGE BODY pkg_users IS
             p_error_msg := sqlerrm;
     END p_read_row;
     
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ РѕР±РЅРѕРІР»РµРЅРёСЏ
+    --Реализация процедуры обновления
     PROCEDURE p_update_row (
         p_users_id     IN NUMBER,
         p_is_superuser IN NUMBER,
@@ -157,7 +157,7 @@ create or replace NONEDITIONABLE PACKAGE BODY pkg_users IS
             p_error_msg := sqlerrm;
     END p_update_row;
     
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ СѓРґР°Р»РµРЅРёСЏ
+    --Реализация процедуры удаления
     PROCEDURE p_delete_row (
         p_id         IN NUMBER,
         p_error_code OUT NUMBER,
@@ -177,7 +177,7 @@ END pkg_users;
 
 -------------------------------------------------------------------
 -------------------------------------------------------------------
---РЎРїРµС†РёС„РёРєР°С†РёСЏ РїР°РєРµС‚Р° pkg_student
+--Спецификация пакета pkg_student
 CREATE OR REPLACE NONEDITIONABLE PACKAGE pkg_student IS
     FUNCTION f_create_row (
         p_parent_mail            IN VARCHAR2,
@@ -226,9 +226,9 @@ CREATE OR REPLACE NONEDITIONABLE PACKAGE pkg_student IS
 END pkg_student;
 
 -------------------------------------------------------------------
---РўРµР»Рѕ РїР°РєРµС‚Р° pkg_student
+--Тело пакета pkg_student
 CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY pkg_student IS
-    --Р РµР°Р»РёР·Р°Р°С†РёСЏ С„СѓРЅРєС†РёРё РІСЃС‚Р°РІРєРё
+    --Реализаация функции вставки
     FUNCTION f_create_row (
         p_parent_mail            IN VARCHAR2,
         p_additional_information IN VARCHAR2,
@@ -256,7 +256,7 @@ CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY pkg_student IS
             RETURN NULL;
     END f_create_row;
 
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ С‡С‚РµРЅРёСЏ
+    --Реализация процедуры чтения
     PROCEDURE p_read_row (
         p_id         IN NUMBER,
         p_out_row    OUT ksch_student%rowtype,
@@ -279,7 +279,7 @@ CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY pkg_student IS
             p_error_msg := sqlerrm;
     END p_read_row;
     
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ РѕР±РЅРѕРІР»РµРЅРёСЏ
+    --Реализация процедуры обновления
     PROCEDURE p_update_row (
         p_student_id             IN NUMBER,
         p_parent_mail            IN VARCHAR2,
@@ -306,7 +306,7 @@ CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY pkg_student IS
             p_error_msg := sqlerrm;
     END p_update_row;
 
-    --Р РµР°Р»РёР·Р°С†РёСЏ РїСЂРѕС†РµРґСѓСЂС‹ СѓРґР°Р»РµРЅРёСЏ
+    --Реализация процедуры удаления
     PROCEDURE p_delete_row (
         p_id         IN NUMBER,
         p_error_code OUT NUMBER,
@@ -324,7 +324,7 @@ CREATE OR REPLACE NONEDITIONABLE PACKAGE BODY pkg_student IS
             p_error_msg := sqlerrm;
     END p_delete_row;
     
-    --Р РµР°Р»РёР·Р°С†РёСЏ С„СѓРЅРєС†РёРё РґР»СЏ 3 РїСѓРЅРєС‚Р° Р·Р°РґР°РЅРёСЏ
+    --Реализация функции для 3 пункта задания
     FUNCTION f_get_students_of_teacher (
         p_teacher_id IN ksch_teacher.teacher_id%TYPE
     ) RETURN t_student_table
