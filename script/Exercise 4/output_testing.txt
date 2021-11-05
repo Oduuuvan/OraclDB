@@ -1,0 +1,112 @@
+Запрос для таблицы
+CREATE TABLE KNET_USERS
+(
+USERS_ID NUMBER NOT NULL,
+IS_SUPERUSER NUMBER NOT NULL,
+SURNAME VARCHAR2(50) NOT NULL,
+NAME VARCHAR2(50) NOT NULL,
+PATRONYMIC VARCHAR2(50) NULL,
+MAIL VARCHAR2(45) NULL,
+USERNAME VARCHAR2(20) NOT NULL,
+PASSWORD VARCHAR2(45) NOT NULL,
+IS_ACTIVE NUMBER NOT NULL,
+LAST_LOGIN DATE NOT NULL
+);
+
+Запрос для таблицы без указания типа
+CREATE TABLE KNET_USERS
+(
+USERS_ID NUMBER NOT NULL,
+IS_SUPERUSER NUMBER NOT NULL,
+SURNAME VARCHAR2(50) NOT NULL,
+NAME VARCHAR2(50) NOT NULL,
+PATRONYMIC VARCHAR2(50) NULL,
+MAIL VARCHAR2(45) NULL,
+USERNAME VARCHAR2(20) NOT NULL,
+PASSWORD VARCHAR2(45) NOT NULL,
+IS_ACTIVE NUMBER NOT NULL,
+LAST_LOGIN DATE NOT NULL
+);
+
+Запрос для индекса
+CREATE INDEX F_GET_DDL ON TMP_TABLE(A ASC, TMP_TABLE_ID ASC);
+
+Запрос для секвенса
+CREATE SEQUENCE SEQ_CLASS
+MINVALUE 1
+MAXVALUE 9999999999999999999999999999
+START WITH 1
+INCREMENT BY 1;
+
+Запрос для триггера
+CREATE OR REPLACE TRIGGER t_b_users
+BEFORE INSERT ON knet_users
+FOR EACH ROW
+
+BEGIN
+  SELECT SEQ_USERS.nextval
+  INTO   :new.users_id
+  FROM   dual;
+END;
+
+Запрос для пакета
+CREATE OR REPLACE PACKAGE pkg_users IS
+    FUNCTION f_create_row (
+        p_is_superuser IN NUMBER,
+        p_surname      IN VARCHAR2,
+        p_name         IN VARCHAR2,
+        p_patronymic   IN VARCHAR2,
+        p_mail         IN VARCHAR2,
+        p_username     IN VARCHAR2,
+        p_password     IN VARCHAR2,
+        p_is_active    IN NUMBER,
+        p_last_login   IN DATE,
+        p_error_code   OUT NUMBER,
+        p_error_msg    OUT VARCHAR2
+    ) RETURN NUMBER;
+
+    PROCEDURE p_read_row (
+        p_id         IN NUMBER,
+        p_out_row    OUT knet_users%rowtype,
+        p_error_code OUT NUMBER,
+        p_error_msg  OUT VARCHAR2
+    );
+
+    PROCEDURE p_update_row (
+        p_users_id     IN NUMBER,
+        p_is_superuser IN NUMBER,
+        p_surname      IN VARCHAR2,
+        p_name         IN VARCHAR2,
+        p_patronymic   IN VARCHAR2,
+        p_mail         IN VARCHAR2,
+        p_username     IN VARCHAR2,
+        p_password     IN VARCHAR2,
+        p_is_active    IN NUMBER,
+        p_last_login   IN DATE,
+        p_error_code   OUT NUMBER,
+        p_error_msg    OUT VARCHAR2
+    );
+
+    PROCEDURE p_delete_row (
+        p_id         IN NUMBER,
+        p_error_code OUT NUMBER,
+        p_error_msg  OUT VARCHAR2
+    );
+
+END pkg_users;
+
+Проверка исключения: обязательный параметр = null
+ORA-20001: Обязательные параметры (p_owner, p_name) не должны быть NULL
+ORA-06512: на  "SCHOOL.F_GET_DDL", line 225
+
+Проверка исключения: ненайденный объект
+ORA-20002: Объект table school.chtoto не найден
+ORA-06512: на  "SCHOOL.F_GET_DDL", line 227
+
+Проверка исключения: несколько объектов с одинаковыми именами
+ORA-20003: Найдено несколько объектов school.f_get_ddl, необходимо добавить параметр p_type
+ORA-06512: на  "SCHOOL.F_GET_DDL", line 235
+
+Проверка исключения: тип без реализации в функции
+ORA-20004: Нет реализации для типа VIEW
+ORA-06512: на  "SCHOOL.F_GET_DDL", line 241
