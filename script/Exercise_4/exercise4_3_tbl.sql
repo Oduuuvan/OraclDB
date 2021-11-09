@@ -1,6 +1,7 @@
 DECLARE
-    v_str_ddl  CLOB;
-    v_tbl_name VARCHAR2(50) := 'KNET_USERS';
+    v_str_ddl   CLOB;
+    v_tbl_name  VARCHAR2(50) := 'KNET_USERS';
+    v_shrt_name VARCHAR2(50);
 BEGIN
     v_str_ddl := 'CREATE TABLE '
                  || v_tbl_name
@@ -49,7 +50,18 @@ BEGIN
 
     v_str_ddl := substr(v_str_ddl, 1, length(v_str_ddl) - 2)
                  || chr(10)
-                 || ');';
+                 || ');'
+                 || chr(10);
+
+    v_shrt_name := substr(v_tbl_name, 6);
+    v_str_ddl := v_str_ddl
+                 || 'ALTER TABLE '
+                 || v_tbl_name
+                 || ' ADD CONSTRAINT PK_'
+                 || v_shrt_name
+                 || ' PRIMARY KEY ( '
+                 || v_shrt_name
+                 || '_ID );';
 
     dbms_output.put_line(v_str_ddl);
 END;
@@ -70,4 +82,5 @@ PASSWORD VARCHAR2(45) NOT NULL,
 IS_ACTIVE NUMBER NOT NULL,
 LAST_LOGIN DATE NOT NULL
 );
+ALTER TABLE KNET_USERS ADD CONSTRAINT PK_USERS PRIMARY KEY ( USERS_ID );
 */
