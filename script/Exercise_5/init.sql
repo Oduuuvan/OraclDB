@@ -4,4 +4,5 @@
 @triggers.sql
 @data.sql
 @packages.sql
+@get_crud_ddl.sql
 exit

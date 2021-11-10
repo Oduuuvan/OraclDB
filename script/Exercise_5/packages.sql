@@ -1,5 +1,4 @@
 CONNECT &username/&password@&db
-;
 CREATE OR REPLACE PACKAGE pkg_tariff_plan IS
     FUNCTION f_create_row (
         p_plan_name IN VARCHAR2,

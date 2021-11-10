@@ -1,0 +1,384 @@
+
+Function created.
+
+FUNCTION f_create_row (
+P_PLAN_NAME IN VARCHAR2,
+P_SPEED IN                     
+NUMBER,
+P_PRICE_PER_MONTH IN NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT   
+VARCHAR2
+) RETURN NUMBER IS
+v_id                                                
+TARIFF_PLAN.TARIFF_PLAN_ID%type;
+BEGIN
+p_error_code := 0;
+INSERT INTO           
+TARIFF_PLAN (PLAN_NAME,SPEED,PRICE_PER_MONTH)
+VALUES                            
+(P_PLAN_NAME,P_SPEED,P_PRICE_PER_MONTH)
+RETURNING TARIFF_PLAN_ID INTO           
+v_id;
+RETURN v_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code :=                   
+sqlcode;
+p_error_msg := sqlerrm;
+RETURN NULL;
+END f_create_row;
+
+PROCEDURE      
+p_read_row (
+p_id IN NUMBER,
+p_out_row OUT TARIFF_PLAN%rowtype,
+p_error_code OUT
+NUMBER,
+p_error_msg OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+SELECT * INTO    
+p_out_row FROM TARIFF_PLAN WHERE TARIFF_PLAN_ID = p_id;
+EXCEPTION
+WHEN OTHERS   
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END p_read_row;
+
+PROCEDURE
+p_update_row (
+P_TARIFF_PLAN_ID IN NUMBER,
+P_PLAN_NAME IN VARCHAR2,
+P_SPEED IN  
+NUMBER,
+P_PRICE_PER_MONTH IN NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT   
+VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+UPDATE TARIFF_PLAN SET 
+TARIFF_PLAN_ID = 
+P_TARIFF_PLAN_ID,
+PLAN_NAME = P_PLAN_NAME,
+SPEED = P_SPEED,
+PRICE_PER_MONTH =   
+P_PRICE_PER_MONTH
+WHERE TARIFF_PLAN_ID = P_TARIFF_PLAN_ID;
+EXCEPTION
+WHEN OTHERS
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END                       
+p_update_row;
+
+PROCEDURE p_delete_row ( 
+p_id IN NUMBER,
+p_error_code OUT       
+NUMBER,
+p_error_msg  OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+DELETE FROM     
+TARIFF_PLAN WHERE TARIFF_PLAN_ID = p_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code
+:= sqlcode;
+p_error_msg := sqlerrm;
+END p_delete_row;
+                          
+FUNCTION f_create_row (
+P_FIO IN VARCHAR2,
+P_ADRESS IN                          
+VARCHAR2,
+P_PERSONAL_ACCOUNT IN VARCHAR2,
+P_TARIFF_PLAN_ID IN                   
+NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT VARCHAR2
+) RETURN NUMBER       
+IS
+v_id SUBSCRIBER.SUBSCRIBER_ID%type;
+BEGIN
+p_error_code := 0;
+INSERT INTO     
+SUBSCRIBER (FIO,ADRESS,PERSONAL_ACCOUNT,TARIFF_PLAN_ID)
+VALUES                  
+(P_FIO,P_ADRESS,P_PERSONAL_ACCOUNT,P_TARIFF_PLAN_ID)
+RETURNING SUBSCRIBER_ID    
+INTO v_id;
+RETURN v_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code :=              
+sqlcode;
+p_error_msg := sqlerrm;
+RETURN NULL;
+END f_create_row;
+
+PROCEDURE      
+p_read_row (
+p_id IN NUMBER,
+p_out_row OUT SUBSCRIBER%rowtype,
+p_error_code OUT 
+NUMBER,
+p_error_msg OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+SELECT * INTO    
+p_out_row FROM SUBSCRIBER WHERE SUBSCRIBER_ID = p_id;
+EXCEPTION
+WHEN OTHERS     
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END p_read_row;
+
+PROCEDURE
+p_update_row (
+P_SUBSCRIBER_ID IN NUMBER,
+P_FIO IN VARCHAR2,
+P_ADRESS IN        
+VARCHAR2,
+P_PERSONAL_ACCOUNT IN VARCHAR2,
+P_TARIFF_PLAN_ID IN                   
+NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT VARCHAR2
+)                     
+IS
+BEGIN
+p_error_code := 0;
+UPDATE SUBSCRIBER SET 
+SUBSCRIBER_ID =              
+P_SUBSCRIBER_ID,
+FIO = P_FIO,
+ADRESS = P_ADRESS,
+PERSONAL_ACCOUNT =             
+P_PERSONAL_ACCOUNT,
+TARIFF_PLAN_ID = P_TARIFF_PLAN_ID
+WHERE SUBSCRIBER_ID =     
+P_SUBSCRIBER_ID;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code := sqlcode;
+p_error_msg
+:= sqlerrm;
+END p_update_row;
+
+PROCEDURE p_delete_row ( 
+p_id IN                
+NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg  OUT VARCHAR2
+)                    
+IS
+BEGIN
+p_error_code := 0;
+DELETE FROM SUBSCRIBER WHERE SUBSCRIBER_ID =        
+p_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code := sqlcode;
+p_error_msg :=        
+sqlerrm;
+END p_delete_row;
+                                                     
+FUNCTION f_create_row (
+P_DESCRIPTION IN VARCHAR2,
+P_PRICE_PER_MONTH IN         
+NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT VARCHAR2
+) RETURN NUMBER       
+IS
+v_id SERVICES.SERVICES_ID%type;
+BEGIN
+p_error_code := 0;
+INSERT INTO SERVICES
+(DESCRIPTION,PRICE_PER_MONTH)
+VALUES (P_DESCRIPTION,P_PRICE_PER_MONTH)
+RETURNING
+SERVICES_ID INTO v_id;
+RETURN v_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code :=  
+sqlcode;
+p_error_msg := sqlerrm;
+RETURN NULL;
+END f_create_row;
+
+PROCEDURE      
+p_read_row (
+p_id IN NUMBER,
+p_out_row OUT SERVICES%rowtype,
+p_error_code OUT   
+NUMBER,
+p_error_msg OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+SELECT * INTO    
+p_out_row FROM SERVICES WHERE SERVICES_ID = p_id;
+EXCEPTION
+WHEN OTHERS         
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END p_read_row;
+
+PROCEDURE
+p_update_row (
+P_SERVICES_ID IN NUMBER,
+P_DESCRIPTION IN                        
+VARCHAR2,
+P_PRICE_PER_MONTH IN NUMBER,
+p_error_code OUT NUMBER,
+p_error_msg OUT 
+VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+UPDATE SERVICES SET 
+SERVICES_ID =       
+P_SERVICES_ID,
+DESCRIPTION = P_DESCRIPTION,
+PRICE_PER_MONTH =                   
+P_PRICE_PER_MONTH
+WHERE SERVICES_ID = P_SERVICES_ID;
+EXCEPTION
+WHEN OTHERS      
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END                       
+p_update_row;
+
+PROCEDURE p_delete_row ( 
+p_id IN NUMBER,
+p_error_code OUT       
+NUMBER,
+p_error_msg  OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+DELETE FROM     
+SERVICES WHERE SERVICES_ID = p_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code :=   
+sqlcode;
+p_error_msg := sqlerrm;
+END p_delete_row;
+                             
+FUNCTION f_create_row (
+P_START_TIME IN DATE,
+P_END_TIME IN                     
+DATE,
+P_SUBSCRIBER_ID IN NUMBER,
+P_SERVICES_ID IN NUMBER,
+p_error_code OUT      
+NUMBER,
+p_error_msg OUT VARCHAR2
+) RETURN NUMBER IS
+v_id                        
+CONNECTED_SERVICES.CONNECTED_SERVICES_ID%type;
+BEGIN
+p_error_code := 0;
+INSERT  
+INTO CONNECTED_SERVICES (START_TIME,END_TIME,SUBSCRIBER_ID,SERVICES_ID)
+VALUES  
+(P_START_TIME,P_END_TIME,P_SUBSCRIBER_ID,P_SERVICES_ID)
+RETURNING               
+CONNECTED_SERVICES_ID INTO v_id;
+RETURN v_id;
+EXCEPTION
+WHEN OTHERS             
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+RETURN NULL;
+END          
+f_create_row;
+
+PROCEDURE p_read_row (
+p_id IN NUMBER,
+p_out_row OUT             
+CONNECTED_SERVICES%rowtype,
+p_error_code OUT NUMBER,
+p_error_msg OUT VARCHAR2
+) 
+IS
+BEGIN
+p_error_code := 0;
+SELECT * INTO p_out_row FROM CONNECTED_SERVICES     
+WHERE CONNECTED_SERVICES_ID = p_id;
+EXCEPTION
+WHEN OTHERS THEN
+p_error_code :=  
+sqlcode;
+p_error_msg := sqlerrm;
+END p_read_row;
+
+PROCEDURE p_update_row        
+(
+P_CONNECTED_SERVICES_ID IN NUMBER,
+P_START_TIME IN DATE,
+P_END_TIME IN        
+DATE,
+P_SUBSCRIBER_ID IN NUMBER,
+P_SERVICES_ID IN NUMBER,
+p_error_code OUT      
+NUMBER,
+p_error_msg OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+UPDATE           
+CONNECTED_SERVICES SET 
+CONNECTED_SERVICES_ID =                                 
+P_CONNECTED_SERVICES_ID,
+START_TIME = P_START_TIME,
+END_TIME =                  
+P_END_TIME,
+SUBSCRIBER_ID = P_SUBSCRIBER_ID,
+SERVICES_ID = P_SERVICES_ID
+WHERE  
+CONNECTED_SERVICES_ID = P_CONNECTED_SERVICES_ID;
+EXCEPTION
+WHEN OTHERS          
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END                       
+p_update_row;
+
+PROCEDURE p_delete_row ( 
+p_id IN NUMBER,
+p_error_code OUT       
+NUMBER,
+p_error_msg  OUT VARCHAR2
+) IS
+BEGIN
+p_error_code := 0;
+DELETE FROM     
+CONNECTED_SERVICES WHERE CONNECTED_SERVICES_ID = p_id;
+EXCEPTION
+WHEN OTHERS    
+THEN
+p_error_code := sqlcode;
+p_error_msg := sqlerrm;
+END p_delete_row;
+        
+
+PL/SQL procedure successfully completed.
+

@@ -1,5 +1,4 @@
 CONNECT &username/&password@&db
-;
 CREATE TABLE tariff_plan (
     tariff_plan_id  NUMBER PRIMARY KEY,
     plan_name       VARCHAR2(50 CHAR),

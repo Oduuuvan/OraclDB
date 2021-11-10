@@ -1,5 +1,4 @@
 CONNECT &username/&password@&db
-;
 INSERT INTO tariff_plan (
     plan_name,
     speed,

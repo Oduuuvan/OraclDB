@@ -1,5 +1,4 @@
 CONNECT &username/&password@&db
-;
 CREATE OR REPLACE TRIGGER t_b_tariff_plan
 BEFORE INSERT ON tariff_plan
 FOR EACH ROW
