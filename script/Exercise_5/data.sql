@@ -4,7 +4,7 @@ INSERT INTO tariff_plan (
     speed,
     price_per_month
 ) VALUES (
-    'Домашний',
+    'Р”РѕРјР°С€РЅРёР№',
     100.00,
     600.00
 )
@@ -14,7 +14,7 @@ INSERT INTO tariff_plan (
     speed,
     price_per_month
 ) VALUES (
-    'Сотовый',
+    'РЎРѕС‚РѕРІС‹Р№',
     20.00,
     300.00
 )
@@ -24,7 +24,7 @@ INSERT INTO tariff_plan (
     speed,
     price_per_month
 ) VALUES (
-    'Безлимит',
+    'Р‘РµР·Р»РёРјРёС‚',
     100.00,
     800.00
 )
@@ -33,7 +33,7 @@ INSERT INTO services (
     description,
     price_per_month
 ) VALUES (
-    'ТВ',
+    'РўР’',
     200.00
 )
 ;
@@ -41,7 +41,7 @@ INSERT INTO services (
     description,
     price_per_month
 ) VALUES (
-    'Домашний телефон',
+    'Р”РѕРјР°С€РЅРёР№ С‚РµР»РµС„РѕРЅ',
     100.00
 )
 ;
@@ -49,7 +49,7 @@ INSERT INTO services (
     description,
     price_per_month
 ) VALUES (
-    'Бесплатные СМС',
+    'Р‘РµСЃРїР»Р°С‚РЅС‹Рµ РЎРњРЎ',
     150.00
 )
 ;
@@ -59,8 +59,8 @@ INSERT INTO subscriber (
     personal_account,
     tariff_plan_id
 ) VALUES (
-    'Сат Влад Ал',
-    'пр.Пупкина д.15',
+    'РЎР°С‚ Р’Р»Р°Рґ РђР»',
+    'РїСЂ.РџСѓРїРєРёРЅР° Рґ.15',
     '456456',
     1
 )
@@ -71,8 +71,8 @@ INSERT INTO subscriber (
     personal_account,
     tariff_plan_id
 ) VALUES (
-    'Май Окс Ал',
-    'пр.Витязь д.70',
+    'РњР°Р№ РћРєСЃ РђР»',
+    'РїСЂ.Р’РёС‚СЏР·СЊ Рґ.70',
     '654848',
     2
 )
@@ -83,8 +83,8 @@ INSERT INTO subscriber (
     personal_account,
     tariff_plan_id
 ) VALUES (
-    'Тах Эл Тар',
-    'ул.Кропоткина д.3',
+    'РўР°С… Р­Р» РўР°СЂ',
+    'СѓР».РљСЂРѕРїРѕС‚РєРёРЅР° Рґ.3',
     '584654',
     3
 )
@@ -95,8 +95,8 @@ INSERT INTO subscriber (
     personal_account,
     tariff_plan_id
 ) VALUES (
-    'Ткач Рома Вик',
-    'ул.Рабочая д.21',
+    'РўРєР°С‡ Р РѕРјР° Р’РёРє',
+    'СѓР».Р Р°Р±РѕС‡Р°СЏ Рґ.21',
     '487121',
     1
 )
